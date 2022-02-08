@@ -10,9 +10,17 @@
   },
   "name": "hotel",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd hotel && npm run build",
+    "install-client": "cd hotel && npm install",
+    "heroku-postbuild":"npm run install-hotel && npm run build",
+    "start":"node server.js",
+    "client":"cd hotel && npm start"
+
+    
   },
   "author": "",
   "license": "ISC",

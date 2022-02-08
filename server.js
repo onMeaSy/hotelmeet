@@ -12,4 +12,9 @@ app.use('/api/users',userRoute)
 app.use('/api/bookings',bookingsRoute)
 
 const port = process.env.PORT || 5000;
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('hotel/build'));
+}
+
 app.listen(port,()=>console.log("Node Server started"));
